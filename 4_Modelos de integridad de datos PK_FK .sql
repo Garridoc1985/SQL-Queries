@@ -8,7 +8,7 @@ Modelos de integridad de datos Primary key _ Foreign key
 Create table peliculas 
 ( ID INT, 
  NOMBRE VARCHAR ( 255) ,
- ANO INT,
+ AÑO INT,
  Primary key (id));
 
 Create table TAGS 
@@ -20,7 +20,8 @@ Create table TAGS
  foreign key ( peliculas_id ) references  peliculas ( id),
  foreign key ( tags_id) references tags ( id));
  
- select *from peliculas_tags
+ select *from peliculas
+ 
 
 2---Inserta 5 películas y 5 tags; la primera película debe tener 3 tags asociados, la
 ---segunda película debe tener 2 tags asociados

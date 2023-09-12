@@ -1,0 +1,4 @@
+select * from PELICULAS_TAGS
+ Create table PELICULAS_TAGS ( peliculas_id INT,tags_id int,
+ foreign key ( peliculas_id ) references  peliculas ( id),
+ foreign key ( tags_id) references tags ( id));

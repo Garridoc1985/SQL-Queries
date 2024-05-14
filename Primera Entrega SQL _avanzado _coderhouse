@@ -1,0 +1,22 @@
+Entrega inicial SQL avanzado – Coder House / LUNES 20 MAYO 
+
+Sebastián_ Garrido_ Cood / Comisión _57175
+
+Nombre: Sebastián Garrido Cood 
+
+Temática 
+La temática de esta base de datos se centra en analizar la rentabilidad de las sucursales de la empresa Patagonia enfocándose en la relación entre ubicación geográfica y desempeño financiero.
+
+Objetivo del proyecto
+
+El objetivo principal es entender cómo factores como la ubicación de las sucursales influyen en sus ingresos, gastos y utilidades, proporcionando información clave para la toma de decisiones estratégicas.
+
+La base de datos contendrá información detallada sobre cada sucursal de Patagonia, incluyendo su nombre, dirección, ciudad, región correspondiente. Estos datos permitirán segmentar el análisis por ubicación, identificando patrones y tendencias específicas para cada área geográfica donde opera la empresa.
+
+Además de los datos de ubicación, se registrarán las ventas realizadas en cada sucursal, detallando el monto de cada transacción y la fecha correspondiente. Esto permitirá calcular los ingresos totales generados por cada sucursal en un período determinado, así como analizar la evolución de las ventas a lo largo del tiempo.
+
+
+
+
+
+

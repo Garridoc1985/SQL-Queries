@@ -10,11 +10,11 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE PROCEDURE actualizar_proveedor(IN id_proveedor_p INT, IN nuevo_nombre VARCHAR(100))
+CREATE PROCEDURE actualizar_proveedor(IN id_proveedor_parametro INT, IN nuevo_nombre VARCHAR(100))
 BEGIN
     UPDATE proveedores
     SET nombre_proveedor = nuevo_nombre
-    WHERE id_proveedor = id_proveedor_p;
+    WHERE id_proveedor = id_proveedor_parametro;
 END$$
 
 DELIMITER ;

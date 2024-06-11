@@ -48,4 +48,22 @@ END; //
 
 DELIMITER ;
 
+DELIMITER //
+
+CREATE TRIGGER before_insert_ventas
+BEFORE INSERT ON ventas
+FOR EACH ROW
+BEGIN
+    IF NEW.total_venta < 0 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'El total de la venta no puede ser negativo';
+    END IF;
+END; //
+
+DELIMITER ;
+
+
+
+
+
 

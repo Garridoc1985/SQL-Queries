@@ -1,6 +1,6 @@
 
 
-DELIMITER $$
+DELIMITER //
 
 CREATE FUNCTION obtener_documentos_por_proveedor(id_proveedor INT)
 RETURNS INT
@@ -11,11 +11,11 @@ BEGIN
     FROM documento_proveedor
     WHERE id_proveedor = id_proveedor;
     RETURN total;
-END$$
+END//
 
 DELIMITER ;
 
-DELIMITER $$
+DELIMITER //
 
 CREATE FUNCTION promedio_ventas_por_anio_y_region(anio_param INT, region_param VARCHAR(255))
 RETURNS DECIMAL(10,2)
@@ -29,12 +29,12 @@ BEGIN
     WHERE anio = anio_param AND region = region_param;
 
     RETURN promedio;
-END$$
+END//
 
 DELIMITER ;
 
 
-DELIMITER $$
+DELIMITER //
 
 CREATE FUNCTION sucursal_con_mas_ventas(id_producto INT)
 RETURNS VARCHAR(255)
@@ -57,7 +57,7 @@ BEGIN
     LIMIT 1;
     
     RETURN CONCAT('Sucursal: ', nombre_sucursal_max, ', Categoría Producto: ', categoria_producto_max, ', Género: ', genero_producto_max, ', Total Venta: ', total_venta_max);
-END$$
+END//
 
 DELIMITER ;
 

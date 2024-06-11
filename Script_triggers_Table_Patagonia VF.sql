@@ -62,6 +62,22 @@ END; //
 
 DELIMITER ;
 
+DELIMITER //
+
+CREATE TRIGGER after_insert_ventas
+AFTER INSERT ON ventas
+FOR EACH ROW
+BEGIN
+    INSERT INTO auditoria_ventas (id_venta, accion, fecha_accion, columna_cambiada, valor_anterior, valor_nuevo)
+    VALUES (NEW.id_venta, 'INSERT', NOW(), NULL, NULL, NEW.total_venta);
+END; //
+
+DELIMITER ;
+
+
+
+
+
 
 
 

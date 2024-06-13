@@ -74,15 +74,14 @@ END; //
 
 DELIMITER ;
 
-
 DELIMITER //
 
-CREATE TRIGGER after_delete_ventas
-AFTER DELETE ON ventas
+CREATE TRIGGER after_delete_documento_proveedor
+AFTER DELETE ON documento_proveedor
 FOR EACH ROW
 BEGIN
-    INSERT INTO auditoria_ventas (id_venta, accion, fecha_accion, columna_cambiada, valor_anterior, valor_nuevo)
-    VALUES (OLD.id_venta, 'DELETE', NOW(), NULL, OLD.total_venta, NULL);
+    INSERT INTO auditoria_documento_proveedor (id_documento, accion, fecha_accion, columna_cambiada, valor_anterior, valor_nuevo)
+    VALUES (OLD.id_documento, 'DELETE', NOW(), NULL, OLD.total_factura, NULL);
 END; //
 
 DELIMITER ;

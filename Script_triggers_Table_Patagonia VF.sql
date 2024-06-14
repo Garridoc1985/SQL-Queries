@@ -74,6 +74,17 @@ END; //
 
 DELIMITER ;
 
+CREATE TABLE auditoria_documento_proveedor (
+    id_auditoria INT AUTO_INCREMENT PRIMARY KEY,
+    id_documento INT,
+    accion VARCHAR(10),
+    fecha_accion DATETIME,
+    columna_cambiada VARCHAR(50),
+    valor_anterior VARCHAR(255),
+    valor_nuevo VARCHAR(255)
+);
+
+
 DELIMITER //
 
 CREATE TRIGGER after_delete_documento_proveedor
